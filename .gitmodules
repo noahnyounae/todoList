@@ -1,0 +1,6 @@
+[submodule "todo-list-web"]
+	path = todo-list-web
+	url = https://github.com/noahnyounae/todo-list-web
+[submodule "todo-list-api"]
+	path = todo-list-api
+	url = https://github.com/noahnyounae/todo-list-api
