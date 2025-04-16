@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  todo-list-api:
+    build:
+      context: ./todo-list-api
+      dockerfile: Dockerfile
+    container_name: todo-list-api
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+    # ...additional configurations...
+    
+  todo-list-web:
+    build:
+      context: ./todo-list-web
+      dockerfile: Dockerfile
+    container_name: todo-list-web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - todo-list-api
+    environment:
+      - NODE_ENV=development
+    # ...additional configurations...
